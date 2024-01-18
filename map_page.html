@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china.js"></script>
+
+    
+</head>
+<body >
+    <style>.box {             display: flex;
+            justify-content: space-around;  } </style>
+    <div class="box">
+                <div id="patient_map" class="chart-container" style="width:70%; height:700px; "></div>
+    <script>
+        var chart_patient_map = echarts.init(
+            document.getElementById('patient_map'), 'white', {renderer: 'canvas'});
+        var option_patient_map = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u75c5\u4eba\u6570\u91cf",
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "map": "china",
+            "data": [
+                {
+                    "name": null,
+                    "value": 175
+                },
+                {
+                    "name": "\u5317\u4eac\u5e02",
+                    "value": 1333
+                },
+                {
+                    "name": "\u5929\u6d25\u5e02",
+                    "value": 289
+                },
+                {
+                    "name": "\u6cb3\u5317\u7701",
+                    "value": 145
+                },
+                {
+                    "name": "\u5c71\u897f\u7701",
+                    "value": 39
+                },
+                {
+                    "name": "\u5185\u8499\u53e4\u81ea\u6cbb\u533a",
+                    "value": 2427
+                },
+                {
+                    "name": "\u8fbd\u5b81\u7701",
+                    "value": 5
+                },
+                {
+                    "name": "\u5409\u6797\u7701",
+                    "value": 6
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f\u7701",
+                    "value": 128
+                },
+                {
+                    "name": "\u4e0a\u6d77\u5e02",
+                    "value": 385
+                },
+                {
+                    "name": "\u6c5f\u82cf\u7701",
+                    "value": 2102
+                },
+                {
+                    "name": "\u6d59\u6c5f\u7701",
+                    "value": 540
+                },
+                {
+                    "name": "\u5b89\u5fbd\u7701",
+                    "value": 547
+                },
+                {
+                    "name": "\u798f\u5efa\u7701",
+                    "value": 655
+                },
+                {
+                    "name": "\u6c5f\u897f\u7701",
+                    "value": 964
+                },
+                {
+                    "name": "\u5c71\u4e1c\u7701",
+                    "value": 23
+                },
+                {
+                    "name": "\u6cb3\u5357\u7701",
+                    "value": 1
+                },
+                {
+                    "name": "\u6e56\u5317\u7701",
+                    "value": 1
+                },
+                {
+                    "name": "\u6e56\u5357\u7701",
+                    "value": 4
+                },
+                {
+                    "name": "\u5e7f\u4e1c\u7701",
+                    "value": 1
+                },
+                {
+                    "name": "\u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a",
+                    "value": 1
+                },
+                {
+                    "name": "\u6d77\u5357\u7701",
+                    "value": 15
+                },
+                {
+                    "name": "\u91cd\u5e86\u5e02",
+                    "value": 1086
+                },
+                {
+                    "name": "\u56db\u5ddd\u7701",
+                    "value": 8
+                },
+                {
+                    "name": "\u8d35\u5dde\u7701",
+                    "value": 191
+                },
+                {
+                    "name": "\u4e91\u5357\u7701",
+                    "value": 79
+                },
+                {
+                    "name": "\u897f\u85cf\u81ea\u6cbb\u533a",
+                    "value": 62
+                },
+                {
+                    "name": null,
+                    "value": 29
+                },
+                {
+                    "name": null,
+                    "value": 141
+                },
+                {
+                    "name": null,
+                    "value": 2
+                },
+                {
+                    "name": null,
+                    "value": 1
+                },
+                {
+                    "name": null,
+                    "value": 44
+                },
+                {
+                    "name": null,
+                    "value": 1075
+                },
+                {
+                    "name": null,
+                    "value": 3496
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "markPoint": {
+                "symbol": "circle",
+                "symbolSize": 90,
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "map",
+            "name": "\u5e73\u5747\u5c31\u8bca\u6b21\u6570",
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "map": "china",
+            "data": [
+                {
+                    "name": null,
+                    "value": 21.87
+                },
+                {
+                    "name": "\u5317\u4eac\u5e02",
+                    "value": 54.03
+                },
+                {
+                    "name": "\u5929\u6d25\u5e02",
+                    "value": 75.93
+                },
+                {
+                    "name": "\u6cb3\u5317\u7701",
+                    "value": 126.01
+                },
+                {
+                    "name": "\u5c71\u897f\u7701",
+                    "value": 48.18
+                },
+                {
+                    "name": "\u5185\u8499\u53e4\u81ea\u6cbb\u533a",
+                    "value": 20.11
+                },
+                {
+                    "name": "\u8fbd\u5b81\u7701",
+                    "value": 131.6
+                },
+                {
+                    "name": "\u5409\u6797\u7701",
+                    "value": 51.0
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f\u7701",
+                    "value": 86.55
+                },
+                {
+                    "name": "\u4e0a\u6d77\u5e02",
+                    "value": 19.99
+                },
+                {
+                    "name": "\u6c5f\u82cf\u7701",
+                    "value": 21.29
+                },
+                {
+                    "name": "\u6d59\u6c5f\u7701",
+                    "value": 8.48
+                },
+                {
+                    "name": "\u5b89\u5fbd\u7701",
+                    "value": 81.73
+                },
+                {
+                    "name": "\u798f\u5efa\u7701",
+                    "value": 34.31
+                },
+                {
+                    "name": "\u6c5f\u897f\u7701",
+                    "value": 27.31
+                },
+                {
+                    "name": "\u5c71\u4e1c\u7701",
+                    "value": 40.26
+                },
+                {
+                    "name": "\u6cb3\u5357\u7701",
+                    "value": 111.0
+                },
+                {
+                    "name": "\u6e56\u5317\u7701",
+                    "value": 31.0
+                },
+                {
+                    "name": "\u6e56\u5357\u7701",
+                    "value": 40.0
+                },
+                {
+                    "name": "\u5e7f\u4e1c\u7701",
+                    "value": 19.0
+                },
+                {
+                    "name": "\u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a",
+                    "value": 100.0
+                },
+                {
+                    "name": "\u6d77\u5357\u7701",
+                    "value": 214.53
+                },
+                {
+                    "name": "\u91cd\u5e86\u5e02",
+                    "value": 57.77
+                },
+                {
+                    "name": "\u56db\u5ddd\u7701",
+                    "value": 37.63
+                },
+                {
+                    "name": "\u8d35\u5dde\u7701",
+                    "value": 41.31
+                },
+                {
+                    "name": "\u4e91\u5357\u7701",
+                    "value": 23.99
+                },
+                {
+                    "name": "\u897f\u85cf\u81ea\u6cbb\u533a",
+                    "value": 41.82
+                },
+                {
+                    "name": null,
+                    "value": 123.41
+                },
+                {
+                    "name": null,
+                    "value": 29.91
+                },
+                {
+                    "name": null,
+                    "value": 41.0
+                },
+                {
+                    "name": null,
+                    "value": 41.0
+                },
+                {
+                    "name": null,
+                    "value": 101.89
+                },
+                {
+                    "name": null,
+                    "value": 36.59
+                },
+                {
+                    "name": null,
+                    "value": 36.63
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "markPoint": {
+                "symbol": "circle",
+                "symbolSize": 90,
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "map",
+            "name": "\u5e73\u5747\u82b1\u8d39",
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "map": "china",
+            "data": [
+                {
+                    "name": null,
+                    "value": 15446.45
+                },
+                {
+                    "name": "\u5317\u4eac\u5e02",
+                    "value": 22725.82
+                },
+                {
+                    "name": "\u5929\u6d25\u5e02",
+                    "value": 50083.34
+                },
+                {
+                    "name": "\u6cb3\u5317\u7701",
+                    "value": 60310.35
+                },
+                {
+                    "name": "\u5c71\u897f\u7701",
+                    "value": 79163.17
+                },
+                {
+                    "name": "\u5185\u8499\u53e4\u81ea\u6cbb\u533a",
+                    "value": 10215.52
+                },
+                {
+                    "name": "\u8fbd\u5b81\u7701",
+                    "value": 176021.53
+                },
+                {
+                    "name": "\u5409\u6797\u7701",
+                    "value": 56816.68
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f\u7701",
+                    "value": 65738.5
+                },
+                {
+                    "name": "\u4e0a\u6d77\u5e02",
+                    "value": 36104.56
+                },
+                {
+                    "name": "\u6c5f\u82cf\u7701",
+                    "value": 14227.84
+                },
+                {
+                    "name": "\u6d59\u6c5f\u7701",
+                    "value": 4463.61
+                },
+                {
+                    "name": "\u5b89\u5fbd\u7701",
+                    "value": 33982.72
+                },
+                {
+                    "name": "\u798f\u5efa\u7701",
+                    "value": 16212.94
+                },
+                {
+                    "name": "\u6c5f\u897f\u7701",
+                    "value": 15860.82
+                },
+                {
+                    "name": "\u5c71\u4e1c\u7701",
+                    "value": 41169.58
+                },
+                {
+                    "name": "\u6cb3\u5357\u7701",
+                    "value": 61254.3
+                },
+                {
+                    "name": "\u6e56\u5317\u7701",
+                    "value": 9741.48
+                },
+                {
+                    "name": "\u6e56\u5357\u7701",
+                    "value": 65861.18
+                },
+                {
+                    "name": "\u5e7f\u4e1c\u7701",
+                    "value": 26430.94
+                },
+                {
+                    "name": "\u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a",
+                    "value": 38937.58
+                },
+                {
+                    "name": "\u6d77\u5357\u7701",
+                    "value": 127197.74
+                },
+                {
+                    "name": "\u91cd\u5e86\u5e02",
+                    "value": 17285.3
+                },
+                {
+                    "name": "\u56db\u5ddd\u7701",
+                    "value": 13974.33
+                },
+                {
+                    "name": "\u8d35\u5dde\u7701",
+                    "value": 22127.32
+                },
+                {
+                    "name": "\u4e91\u5357\u7701",
+                    "value": 25983.81
+                },
+                {
+                    "name": "\u897f\u85cf\u81ea\u6cbb\u533a",
+                    "value": 20435.06
+                },
+                {
+                    "name": null,
+                    "value": 118163.77
+                },
+                {
+                    "name": null,
+                    "value": 36587.03
+                },
+                {
+                    "name": null,
+                    "value": 34800.4
+                },
+                {
+                    "name": null,
+                    "value": 3272.04
+                },
+                {
+                    "name": null,
+                    "value": 83126.43
+                },
+                {
+                    "name": null,
+                    "value": 18120.43
+                },
+                {
+                    "name": null,
+                    "value": 14697.84
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "markPoint": {
+                "symbol": "circle",
+                "symbolSize": 90,
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u75c5\u4eba\u6570\u91cf",
+                "\u5e73\u5747\u5c31\u8bca\u6b21\u6570",
+                "\u5e73\u5747\u82b1\u8d39"
+            ],
+            "selected": {},
+            "selectedMode": "single",
+            "show": true,
+            "left": "left",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u75c5\u4eba\u4fe1\u606f\u5730\u56fe",
+            "target": "blank",
+            "subtext": "\u6570\u636e\u6ce8\uff1a\u6570\u636e\u968f\u673a\u751f\u6210",
+            "subtarget": "blank",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": [
+        {
+            "show": true,
+            "type": "piecewise",
+            "min": 0,
+            "max": 100,
+            "text": [
+                "\u9ad8",
+                "\u4f4e"
+            ],
+            "inRange": {
+                "color": [
+                    "#50a3ba",
+                    "#eac763",
+                    "#d94e5d"
+                ]
+            },
+            "calculable": true,
+            "inverse": false,
+            "splitNumber": 5,
+            "hoverLink": true,
+            "orient": "vertical",
+            "left": "left",
+            "padding": 5,
+            "showLabel": true,
+            "itemWidth": 20,
+            "itemHeight": 14,
+            "borderWidth": 0,
+            "pieces": [
+                {
+                    "min": 1000,
+                    "color": "#751d0d"
+                },
+                {
+                    "min": 800,
+                    "max": 1000,
+                    "color": "#d6564c"
+                },
+                {
+                    "min": 400,
+                    "max": 800,
+                    "color": "#f19178"
+                },
+                {
+                    "min": 200,
+                    "max": 400,
+                    "color": "#f7d3a6"
+                },
+                {
+                    "min": 1,
+                    "max": 200,
+                    "color": "#fdf2d3"
+                },
+                {
+                    "min": 0,
+                    "max": 0,
+                    "color": "#FFFFFF"
+                }
+            ]
+        }
+    ]
+};
+        chart_patient_map.setOption(option_patient_map);
+            window.addEventListener('resize', function(){
+                chart_patient_map.resize();
+            })
+    </script>
+<br/>                <div id="bar_chart" class="chart-container" style="width:30%; height:0px; "></div>
+    <script>
+        var chart_bar_chart = echarts.init(
+            document.getElementById('bar_chart'), 'white', {renderer: 'canvas'});
+        var option_bar_chart = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u4eba\u6570",
+            "legendHoverLink": true,
+            "data": [
+                616,
+                442,
+                136,
+                103,
+                29,
+                226,
+                49,
+                11,
+                3,
+                41,
+                37,
+                24,
+                13,
+                10,
+                20,
+                9,
+                9,
+                1,
+                1682,
+                469,
+                221,
+                48,
+                5,
+                4,
+                1,
+                2,
+                2,
+                2,
+                58,
+                45,
+                19,
+                4,
+                2,
+                220,
+                124,
+                37,
+                3,
+                1,
+                1886,
+                211,
+                5,
+                271,
+                190,
+                63,
+                15,
+                1,
+                181,
+                167,
+                89,
+                59,
+                31,
+                351,
+                263,
+                37,
+                4,
+                412,
+                330,
+                173,
+                39,
+                10,
+                11,
+                7,
+                4,
+                1,
+                1,
+                1,
+                3,
+                1,
+                1,
+                1,
+                8,
+                2,
+                2,
+                2,
+                1,
+                532,
+                505,
+                48,
+                1,
+                5,
+                2,
+                1,
+                51,
+                49,
+                46,
+                39,
+                6,
+                31,
+                22,
+                14,
+                9,
+                3
+            ],
+            "realtimeSort": false,
+            "showBackground": false,
+            "stackStrategy": "samesign",
+            "cursor": "pointer",
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4eba\u6570"
+            ],
+            "selected": {},
+            "selectedMode": "single",
+            "show": true,
+            "left": "right",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "3",
+                "4",
+                "5",
+                "2",
+                "6",
+                "1",
+                "2",
+                "3",
+                "4",
+                "4",
+                "3",
+                "5",
+                "2",
+                "7",
+                "1",
+                "2",
+                "3",
+                "4",
+                "2",
+                "3",
+                "1",
+                "4",
+                "5",
+                "2",
+                "1",
+                "2",
+                "4",
+                "1",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "1",
+                "2",
+                "3",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "3",
+                "4",
+                "5",
+                "2",
+                "6",
+                "1",
+                "2",
+                "3",
+                "4",
+                "2",
+                "1",
+                "3",
+                "4",
+                "5",
+                "1",
+                "2",
+                "3",
+                "4",
+                "2",
+                "2",
+                "1",
+                "2",
+                "1",
+                "3",
+                "4",
+                "6",
+                "3",
+                "5",
+                "2",
+                "2",
+                "1",
+                "3",
+                "4",
+                "2",
+                "1",
+                "3",
+                "2",
+                "3",
+                "1",
+                "4",
+                "5",
+                "2",
+                "3",
+                "1",
+                "4",
+                "5"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": {
+        "text": "xx\u7701\u60a3\u8005\u6700\u503e\u5411\u4e8e\u53bb\u7684\u533b\u9662"
+    }
+};
+        chart_bar_chart.setOption(option_bar_chart);
+            window.addEventListener('resize', function(){
+                chart_bar_chart.resize();
+            })
+    </script>
+<br/>    </div>
+    <script>
+            
+            chart_patient_map.on('legendselectchanged', function (params) {
+                var selected = params.selected;
+                var color_range1 = [{'min': 40, 'color': '#751d0d'}, {'min': 30, 'max': 40, 'color': '#d6564c'}, {'min': 20, 'max': 30, 'color': '#f19178'}, {'min': 10, 'max': 20, 'color': '#f7d3a6'}, {'min': 1, 'max': 9, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
+                var color_range2 = [{'min': 1000, 'color': '#751d0d'}, {'min': 800, 'max': 1000, 'color': '#d6564c'}, {'min': 400, 'max': 800, 'color': '#f19178'}, {'min': 200, 'max': 400, 'color': '#f7d3a6'}, {'min': 1, 'max': 200, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
+                var color_range3 = [{'min': 20000, 'color': '#751d0d'}, {'min': 15000, 'max': 20000, 'color': '#d6564c'}, {'min': 10000, 'max': 15000, 'color': '#f19178'}, {'min': 5000, 'max': 10000, 'color': '#f7d3a6'}, {'min': 1, 'max': 5000, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
+    
+                if (selected['平均就诊次数']) {
+                    this.setOption({
+                        visualMap: {
+                            pieces: color_range1
+                        }
+                    });
+                } else if(selected['病人数量']){
+                    this.setOption({
+                        visualMap: {
+                            pieces: color_range2
+                        }
+                    });
+                } else{
+                    this.setOption({
+                        visualMap: {
+                            pieces: color_range3
+                        }
+                    });
+                }
+            });
+            
+            
+var regionData = ['北京市', '北京市', '北京市', '北京市', '北京市', '天津市', '天津市', '天津市', '天津市', '河北省', '河北省', '河北省', '河北省', '河北省', '山西省', '山西省', '山西省', '山西省', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '辽宁省', '辽宁省', '吉林省', '吉林省', '吉林省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '上海市', '上海市', '上海市', '上海市', '上海市', '江苏省', '江苏省', '江苏省', '浙江省', '浙江省', '浙江省', '浙江省', '浙江省', '安徽省', '安徽省', '安徽省', '安徽省', '安徽省', '福建省', '福建省', '福建省', '福建省', '江西省', '江西省', '江西省', '江西省', '江西省', '山东省', '山东省', '山东省', '山东省', '河南省', '湖北省', '湖南省', '湖南省', '广东省', '广西壮族自治区', '海南省', '海南省', '海南省', '海南省', '海南省', '重庆市', '重庆市', '重庆市', '重庆市', '四川省', '四川省', '四川省', '贵州省', '贵州省', '贵州省', '贵州省', '贵州省', '云南省', '云南省', '云南省', '云南省', '云南省'];  // 地区数据
+var hospitalData = {'医院编码_NN': [3, 4, 5, 2, 6, 1, 2, 3, 4, 4, 3, 5, 2, 7, 1, 2, 3, 4, 2, 3, 1, 4, 5, 2, 1, 2, 4, 1, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3, 4, 5, 3, 4, 5, 2, 6, 1, 2, 3, 4, 2, 1, 3, 4, 5, 1, 2, 3, 4, 2, 2, 1, 2, 1, 3, 4, 6, 3, 5, 2, 2, 1, 3, 4, 2, 1, 3, 2, 3, 1, 4, 5, 2, 3, 1, 4, 5], 'count': [616, 442, 136, 103, 29, 226, 49, 11, 3, 41, 37, 24, 13, 10, 20, 9, 9, 1, 1682, 469, 221, 48, 5, 4, 1, 2, 2, 2, 58, 45, 19, 4, 2, 220, 124, 37, 3, 1, 1886, 211, 5, 271, 190, 63, 15, 1, 181, 167, 89, 59, 31, 351, 263, 37, 4, 412, 330, 173, 39, 10, 11, 7, 4, 1, 1, 1, 3, 1, 1, 1, 8, 2, 2, 2, 1, 532, 505, 48, 1, 5, 2, 1, 51, 49, 46, 39, 6, 31, 22, 14, 9, 3]};  // 医院数据
+var bar_chart = echarts.init(document.getElementById('bar_chart'));  // 获取柱状图实例
+
+chart_patient_map.on('click', function(params) {
+    // 获取点击的地区
+    var selectedRegion = params.name;
+    var newTitle=selectedRegion+"患者最倾向于去的医院";
+    // 根据点击的地区获取对应的数据
+    var indices = [];
+    for (var i = 0; i < regionData.length; i++) {
+        if (regionData[i] === selectedRegion) {
+            indices.push(i);
+        }
+    }
+    
+    var newData = {
+        '医院编码_NN': [],
+        'count': []
+    };
+    
+    for (var i = 0; i < indices.length; i++) {
+        newData['医院编码_NN'].push(hospitalData['医院编码_NN'][indices[i]]+"医院");
+        newData['count'].push(hospitalData['count'][indices[i]]);
+    }
+    bar_chart.resize({ height: "600px" });
+        bar_chart.setOption({
+            xAxis: {
+                data: newData['医院编码_NN'].map(String)
+            },
+            series: [{
+                data: newData['count']
+            }],
+            title: [{
+                text: newTitle
+            }],
+            
+        });
+    });
+    
+    </script>
+</body>
+</html>
