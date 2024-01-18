@@ -1,5 +1,6 @@
 from typing import List
 import pandas as pd
+from bs4 import BeautifulSoup
 from pyecharts.charts import Map, Page, Bar, Grid
 from pyecharts import options as opts
 import glob
@@ -30,7 +31,15 @@ province_dict = {
     23: '四川省',
     24: '贵州省',
     25: '云南省',
-    26: '西藏自治区'
+    26: '西藏自治区',
+    27: '陕西省',
+    28: '甘肃省',
+    29: '青海省',
+    30: '宁夏回族自治区',
+    31: '新疆维吾尔自治区',
+    32: '香港特别行政区',
+    33: '澳门特别行政区',
+    34: '台湾省',
 }
 hospital_data = []
 province_list = []
@@ -38,11 +47,9 @@ province_list = []
 
 def read_hot():
     dfs = []
-    for i in range(1, 26):
+    for i in range(1, 50):
         filelist: List[str] = glob.glob(
             "C:/Users/15251/IdeaProjects/MedicialAnalisy/src/main/resources/hospitalTop5/地区=" + str(i) + "/*.csv")
-        if i == 2:
-            print(i)
         if len(filelist) == 0:
             print("没有找到csv文件")
             continue
@@ -92,6 +99,14 @@ if __name__ == '__main__':
         {"min": 1, "max": 5000, "color": "#fdf2d3"},
         {"min": 0, "max": 0, "color": "#FFFFFF"}
     ]
+    color_range4 = [
+        {"min": 80, "color": "#751d0d"},
+        {"min": 60, "max": 80, "color": "#d6564c"},
+        {"min": 40, "max": 60, "color": "#f19178"},
+        {"min": 20, "max": 40, "color": "#f7d3a6"},
+        {"min": 1, "max": 20, "color": "#fdf2d3"},
+        {"min": 0, "max": 0, "color": "#FFFFFF"}
+    ]
     f_map = (
         Map(init_opts=opts.InitOpts(width="70%",
                                     height="700px",
@@ -113,6 +128,12 @@ if __name__ == '__main__':
              maptype="china",
              is_map_symbol_show=False
              )
+        .add(
+            series_name="欺诈率(%)",
+            data_pair=read_location_csv("deceptionRate","rate"),
+            maptype="china",
+            is_map_symbol_show=False
+        )
         .set_global_opts(
             title_opts=opts.TitleOpts(title="病人信息地图",
                                       subtitle="数据"
@@ -150,7 +171,7 @@ if __name__ == '__main__':
                 var color_range1 = %(color_range1)s;
                 var color_range2 = %(color_range2)s;
                 var color_range3 = %(color_range3)s;
-    
+                var color_range4 = %(color_range4)s;
                 if (selected['平均就诊次数']) {
                     this.setOption({
                         visualMap: {
@@ -163,6 +184,13 @@ if __name__ == '__main__':
                             pieces: color_range2
                         }
                     });
+                }  else if(selected['欺诈率(%%)']){
+                    this.setOption({
+                        visualMap: {
+                            pieces: color_range4
+                            
+                        }
+                    });
                 } else{
                     this.setOption({
                         visualMap: {
@@ -171,7 +199,7 @@ if __name__ == '__main__':
                     });
                 }
             });
-            """ % {'color_range1': color_range1, 'color_range2': color_range2, 'color_range3': color_range3}
+            """ % {'color_range1': color_range1, 'color_range2': color_range2, 'color_range3': color_range3,'color_range4':color_range4}
     )
     df = read_hot()
     bar = Bar(
@@ -183,7 +211,6 @@ if __name__ == '__main__':
     )
     bar.add_xaxis(df['医院编码_NN'].astype(str).tolist())
     bar.add_yaxis("人数", df['count'].tolist())
-    bar.render()
     bar.set_global_opts(
         title_opts={"text": "xx省患者最倾向于去的医院"},
         legend_opts=opts.LegendOpts(
@@ -237,3 +264,22 @@ chart_patient_map.on('click', function(params) {
     """ % (df['location'].tolist(), df[['医院编码_NN', 'count']].to_dict(orient='list'))
     page.add_js_funcs(js_code)
     page.render("map_page.html", encoding="utf-8")
+
+    html_file_path = 'map_page.html'
+
+    # 打开文件并读取内容
+    with open(html_file_path, 'r', encoding='utf-8') as file:
+        # 读取文件内容
+        html_content = file.read()
+
+    # 使用BeautifulSoup解析HTML
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # 查找样式标签并替换内容
+    style_tag = soup.find('style', string=lambda text: ".box" in text if text else False)
+    if style_tag:
+        style_tag.string = ".box { display: flex; justify-content: space-around; }"
+
+    # 保存修改后的HTML文件
+    with open('map_page.html', 'w', encoding='utf-8') as file:
+        file.write(str(soup))

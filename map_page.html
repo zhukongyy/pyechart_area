@@ -1,19 +1,17 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
-            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china.js"></script>
-
-    
+<meta charset="utf-8"/>
+<title>Awesome-pyecharts</title>
+<script src="https://assets.pyecharts.org/assets/v5/echarts.min.js" type="text/javascript"></script>
+<script src="https://assets.pyecharts.org/assets/v5/maps/china.js" type="text/javascript"></script>
 </head>
-<body >
-    <style>.box {             display: flex;
-            justify-content: space-around;  } </style>
-    <div class="box">
-                <div id="patient_map" class="chart-container" style="width:70%; height:700px; "></div>
-    <script>
+<body>
+<style>.box { display: flex; justify-content: space-around; }</style>
+<div class="box">
+<div class="chart-container" id="patient_map" style="width:70%; height:700px; "></div>
+<script>
         var chart_patient_map = echarts.init(
             document.getElementById('patient_map'), 'white', {renderer: 'canvas'});
         var option_patient_map = {
@@ -158,31 +156,31 @@
                     "value": 62
                 },
                 {
-                    "name": null,
+                    "name": "\u9655\u897f\u7701",
                     "value": 29
                 },
                 {
-                    "name": null,
+                    "name": "\u7518\u8083\u7701",
                     "value": 141
                 },
                 {
-                    "name": null,
+                    "name": "\u9752\u6d77\u7701",
                     "value": 2
                 },
                 {
-                    "name": null,
+                    "name": "\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a",
                     "value": 1
                 },
                 {
-                    "name": null,
+                    "name": "\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a",
                     "value": 44
                 },
                 {
-                    "name": null,
+                    "name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
                     "value": 1075
                 },
                 {
-                    "name": null,
+                    "name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
                     "value": 3496
                 }
             ],
@@ -333,31 +331,31 @@
                     "value": 41.82
                 },
                 {
-                    "name": null,
+                    "name": "\u9655\u897f\u7701",
                     "value": 123.41
                 },
                 {
-                    "name": null,
+                    "name": "\u7518\u8083\u7701",
                     "value": 29.91
                 },
                 {
-                    "name": null,
+                    "name": "\u9752\u6d77\u7701",
                     "value": 41.0
                 },
                 {
-                    "name": null,
+                    "name": "\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a",
                     "value": 41.0
                 },
                 {
-                    "name": null,
+                    "name": "\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a",
                     "value": 101.89
                 },
                 {
-                    "name": null,
+                    "name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
                     "value": 36.59
                 },
                 {
-                    "name": null,
+                    "name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
                     "value": 36.63
                 }
             ],
@@ -508,32 +506,207 @@
                     "value": 20435.06
                 },
                 {
-                    "name": null,
+                    "name": "\u9655\u897f\u7701",
                     "value": 118163.77
                 },
                 {
-                    "name": null,
+                    "name": "\u7518\u8083\u7701",
                     "value": 36587.03
                 },
                 {
-                    "name": null,
+                    "name": "\u9752\u6d77\u7701",
                     "value": 34800.4
                 },
                 {
-                    "name": null,
+                    "name": "\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a",
                     "value": 3272.04
                 },
                 {
-                    "name": null,
+                    "name": "\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a",
                     "value": 83126.43
                 },
                 {
-                    "name": null,
+                    "name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
                     "value": 18120.43
                 },
                 {
-                    "name": null,
+                    "name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
                     "value": 14697.84
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "markPoint": {
+                "symbol": "circle",
+                "symbolSize": 90,
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "map",
+            "name": "\u6b3a\u8bc8\u7387(%)",
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "map": "china",
+            "data": [
+                {
+                    "name": null,
+                    "value": 0.57
+                },
+                {
+                    "name": "\u5317\u4eac\u5e02",
+                    "value": 4.13
+                },
+                {
+                    "name": "\u6c5f\u82cf\u7701",
+                    "value": 1.0
+                },
+                {
+                    "name": "\u6d59\u6c5f\u7701",
+                    "value": 10.93
+                },
+                {
+                    "name": "\u5b89\u5fbd\u7701",
+                    "value": 11.33
+                },
+                {
+                    "name": "\u798f\u5efa\u7701",
+                    "value": 0.92
+                },
+                {
+                    "name": "\u6c5f\u897f\u7701",
+                    "value": 1.35
+                },
+                {
+                    "name": "\u5c71\u4e1c\u7701",
+                    "value": 8.7
+                },
+                {
+                    "name": "\u6cb3\u5357\u7701",
+                    "value": 0.0
+                },
+                {
+                    "name": "\u6e56\u5317\u7701",
+                    "value": 0.0
+                },
+                {
+                    "name": "\u6e56\u5357\u7701",
+                    "value": 25.0
+                },
+                {
+                    "name": "\u5e7f\u4e1c\u7701",
+                    "value": 0.0
+                },
+                {
+                    "name": "\u5929\u6d25\u5e02",
+                    "value": 10.38
+                },
+                {
+                    "name": "\u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a",
+                    "value": 0.0
+                },
+                {
+                    "name": "\u6d77\u5357\u7701",
+                    "value": 93.33
+                },
+                {
+                    "name": "\u91cd\u5e86\u5e02",
+                    "value": 1.66
+                },
+                {
+                    "name": "\u56db\u5ddd\u7701",
+                    "value": 12.5
+                },
+                {
+                    "name": "\u8d35\u5dde\u7701",
+                    "value": 3.66
+                },
+                {
+                    "name": "\u4e91\u5357\u7701",
+                    "value": 12.66
+                },
+                {
+                    "name": "\u897f\u85cf\u81ea\u6cbb\u533a",
+                    "value": 1.61
+                },
+                {
+                    "name": "\u9655\u897f\u7701",
+                    "value": 89.66
+                },
+                {
+                    "name": "\u7518\u8083\u7701",
+                    "value": 23.4
+                },
+                {
+                    "name": "\u9752\u6d77\u7701",
+                    "value": 50.0
+                },
+                {
+                    "name": "\u6cb3\u5317\u7701",
+                    "value": 66.21
+                },
+                {
+                    "name": "\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a",
+                    "value": 0.0
+                },
+                {
+                    "name": "\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a",
+                    "value": 90.91
+                },
+                {
+                    "name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
+                    "value": 2.33
+                },
+                {
+                    "name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
+                    "value": 0.43
+                },
+                {
+                    "name": "\u5c71\u897f\u7701",
+                    "value": 30.77
+                },
+                {
+                    "name": "\u5185\u8499\u53e4\u81ea\u6cbb\u533a",
+                    "value": 7.29
+                },
+                {
+                    "name": "\u8fbd\u5b81\u7701",
+                    "value": 60.0
+                },
+                {
+                    "name": "\u5409\u6797\u7701",
+                    "value": 33.33
+                },
+                {
+                    "name": "\u9ed1\u9f99\u6c5f\u7701",
+                    "value": 38.28
+                },
+                {
+                    "name": "\u4e0a\u6d77\u5e02",
+                    "value": 3.38
                 }
             ],
             "roam": true,
@@ -571,7 +744,8 @@
             "data": [
                 "\u75c5\u4eba\u6570\u91cf",
                 "\u5e73\u5747\u5c31\u8bca\u6b21\u6570",
-                "\u5e73\u5747\u82b1\u8d39"
+                "\u5e73\u5747\u82b1\u8d39",
+                "\u6b3a\u8bc8\u7387(%)"
             ],
             "selected": {},
             "selectedMode": "single",
@@ -702,8 +876,8 @@
                 chart_patient_map.resize();
             })
     </script>
-<br/>                <div id="bar_chart" class="chart-container" style="width:30%; height:0px; "></div>
-    <script>
+<br/> <div class="chart-container" id="bar_chart" style="width:30%; height:0px; "></div>
+<script>
         var chart_bar_chart = echarts.init(
             document.getElementById('bar_chart'), 'white', {renderer: 'canvas'});
         var option_bar_chart = {
@@ -826,7 +1000,38 @@
                 22,
                 14,
                 9,
-                3
+                3,
+                22,
+                15,
+                14,
+                9,
+                1,
+                11,
+                7,
+                5,
+                2,
+                2,
+                64,
+                43,
+                23,
+                10,
+                1,
+                2,
+                1,
+                18,
+                11,
+                9,
+                6,
+                482,
+                375,
+                140,
+                57,
+                18,
+                1901,
+                1355,
+                209,
+                29,
+                2
             ],
             "realtimeSort": false,
             "showBackground": false,
@@ -1019,7 +1224,38 @@
                 "3",
                 "1",
                 "4",
-                "5"
+                "5",
+                "2",
+                "3",
+                "1",
+                "4",
+                "5",
+                "1",
+                "3",
+                "2",
+                "6",
+                "4",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "1",
+                "1",
+                "2",
+                "3",
+                "1",
+                "4",
+                "2",
+                "3",
+                "4",
+                "1",
+                "5",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
             ]
         }
     ],
@@ -1055,15 +1291,15 @@
                 chart_bar_chart.resize();
             })
     </script>
-<br/>    </div>
-    <script>
+<br/> </div>
+<script>
             
             chart_patient_map.on('legendselectchanged', function (params) {
                 var selected = params.selected;
                 var color_range1 = [{'min': 40, 'color': '#751d0d'}, {'min': 30, 'max': 40, 'color': '#d6564c'}, {'min': 20, 'max': 30, 'color': '#f19178'}, {'min': 10, 'max': 20, 'color': '#f7d3a6'}, {'min': 1, 'max': 9, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
                 var color_range2 = [{'min': 1000, 'color': '#751d0d'}, {'min': 800, 'max': 1000, 'color': '#d6564c'}, {'min': 400, 'max': 800, 'color': '#f19178'}, {'min': 200, 'max': 400, 'color': '#f7d3a6'}, {'min': 1, 'max': 200, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
                 var color_range3 = [{'min': 20000, 'color': '#751d0d'}, {'min': 15000, 'max': 20000, 'color': '#d6564c'}, {'min': 10000, 'max': 15000, 'color': '#f19178'}, {'min': 5000, 'max': 10000, 'color': '#f7d3a6'}, {'min': 1, 'max': 5000, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
-    
+                var color_range4 = [{'min': 80, 'color': '#751d0d'}, {'min': 60, 'max': 80, 'color': '#d6564c'}, {'min': 40, 'max': 60, 'color': '#f19178'}, {'min': 20, 'max': 40, 'color': '#f7d3a6'}, {'min': 1, 'max': 20, 'color': '#fdf2d3'}, {'min': 0, 'max': 0, 'color': '#FFFFFF'}];
                 if (selected['平均就诊次数']) {
                     this.setOption({
                         visualMap: {
@@ -1076,6 +1312,13 @@
                             pieces: color_range2
                         }
                     });
+                }  else if(selected['欺诈率(%)']){
+                    this.setOption({
+                        visualMap: {
+                            pieces: color_range4
+                            
+                        }
+                    });
                 } else{
                     this.setOption({
                         visualMap: {
@@ -1086,8 +1329,8 @@
             });
             
             
-var regionData = ['北京市', '北京市', '北京市', '北京市', '北京市', '天津市', '天津市', '天津市', '天津市', '河北省', '河北省', '河北省', '河北省', '河北省', '山西省', '山西省', '山西省', '山西省', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '辽宁省', '辽宁省', '吉林省', '吉林省', '吉林省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '上海市', '上海市', '上海市', '上海市', '上海市', '江苏省', '江苏省', '江苏省', '浙江省', '浙江省', '浙江省', '浙江省', '浙江省', '安徽省', '安徽省', '安徽省', '安徽省', '安徽省', '福建省', '福建省', '福建省', '福建省', '江西省', '江西省', '江西省', '江西省', '江西省', '山东省', '山东省', '山东省', '山东省', '河南省', '湖北省', '湖南省', '湖南省', '广东省', '广西壮族自治区', '海南省', '海南省', '海南省', '海南省', '海南省', '重庆市', '重庆市', '重庆市', '重庆市', '四川省', '四川省', '四川省', '贵州省', '贵州省', '贵州省', '贵州省', '贵州省', '云南省', '云南省', '云南省', '云南省', '云南省'];  // 地区数据
-var hospitalData = {'医院编码_NN': [3, 4, 5, 2, 6, 1, 2, 3, 4, 4, 3, 5, 2, 7, 1, 2, 3, 4, 2, 3, 1, 4, 5, 2, 1, 2, 4, 1, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3, 4, 5, 3, 4, 5, 2, 6, 1, 2, 3, 4, 2, 1, 3, 4, 5, 1, 2, 3, 4, 2, 2, 1, 2, 1, 3, 4, 6, 3, 5, 2, 2, 1, 3, 4, 2, 1, 3, 2, 3, 1, 4, 5, 2, 3, 1, 4, 5], 'count': [616, 442, 136, 103, 29, 226, 49, 11, 3, 41, 37, 24, 13, 10, 20, 9, 9, 1, 1682, 469, 221, 48, 5, 4, 1, 2, 2, 2, 58, 45, 19, 4, 2, 220, 124, 37, 3, 1, 1886, 211, 5, 271, 190, 63, 15, 1, 181, 167, 89, 59, 31, 351, 263, 37, 4, 412, 330, 173, 39, 10, 11, 7, 4, 1, 1, 1, 3, 1, 1, 1, 8, 2, 2, 2, 1, 532, 505, 48, 1, 5, 2, 1, 51, 49, 46, 39, 6, 31, 22, 14, 9, 3]};  // 医院数据
+var regionData = ['北京市', '北京市', '北京市', '北京市', '北京市', '天津市', '天津市', '天津市', '天津市', '河北省', '河北省', '河北省', '河北省', '河北省', '山西省', '山西省', '山西省', '山西省', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '内蒙古自治区', '辽宁省', '辽宁省', '吉林省', '吉林省', '吉林省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '黑龙江省', '上海市', '上海市', '上海市', '上海市', '上海市', '江苏省', '江苏省', '江苏省', '浙江省', '浙江省', '浙江省', '浙江省', '浙江省', '安徽省', '安徽省', '安徽省', '安徽省', '安徽省', '福建省', '福建省', '福建省', '福建省', '江西省', '江西省', '江西省', '江西省', '江西省', '山东省', '山东省', '山东省', '山东省', '河南省', '湖北省', '湖南省', '湖南省', '广东省', '广西壮族自治区', '海南省', '海南省', '海南省', '海南省', '海南省', '重庆市', '重庆市', '重庆市', '重庆市', '四川省', '四川省', '四川省', '贵州省', '贵州省', '贵州省', '贵州省', '贵州省', '云南省', '云南省', '云南省', '云南省', '云南省', '西藏自治区', '西藏自治区', '西藏自治区', '西藏自治区', '西藏自治区', '陕西省', '陕西省', '陕西省', '陕西省', '陕西省', '甘肃省', '甘肃省', '甘肃省', '甘肃省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区', '新疆维吾尔自治区', '新疆维吾尔自治区', '新疆维吾尔自治区', '香港特别行政区', '香港特别行政区', '香港特别行政区', '香港特别行政区', '香港特别行政区', '澳门特别行政区', '澳门特别行政区', '澳门特别行政区', '澳门特别行政区', '澳门特别行政区'];  // 地区数据
+var hospitalData = {'医院编码_NN': [3, 4, 5, 2, 6, 1, 2, 3, 4, 4, 3, 5, 2, 7, 1, 2, 3, 4, 2, 3, 1, 4, 5, 2, 1, 2, 4, 1, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3, 4, 5, 3, 4, 5, 2, 6, 1, 2, 3, 4, 2, 1, 3, 4, 5, 1, 2, 3, 4, 2, 2, 1, 2, 1, 3, 4, 6, 3, 5, 2, 2, 1, 3, 4, 2, 1, 3, 2, 3, 1, 4, 5, 2, 3, 1, 4, 5, 2, 3, 1, 4, 5, 1, 3, 2, 6, 4, 1, 2, 3, 4, 5, 1, 1, 2, 3, 1, 4, 2, 3, 4, 1, 5, 2, 3, 4, 5, 6], 'count': [616, 442, 136, 103, 29, 226, 49, 11, 3, 41, 37, 24, 13, 10, 20, 9, 9, 1, 1682, 469, 221, 48, 5, 4, 1, 2, 2, 2, 58, 45, 19, 4, 2, 220, 124, 37, 3, 1, 1886, 211, 5, 271, 190, 63, 15, 1, 181, 167, 89, 59, 31, 351, 263, 37, 4, 412, 330, 173, 39, 10, 11, 7, 4, 1, 1, 1, 3, 1, 1, 1, 8, 2, 2, 2, 1, 532, 505, 48, 1, 5, 2, 1, 51, 49, 46, 39, 6, 31, 22, 14, 9, 3, 22, 15, 14, 9, 1, 11, 7, 5, 2, 2, 64, 43, 23, 10, 1, 2, 1, 18, 11, 9, 6, 482, 375, 140, 57, 18, 1901, 1355, 209, 29, 2]};  // 医院数据
 var bar_chart = echarts.init(document.getElementById('bar_chart'));  // 获取柱状图实例
 
 chart_patient_map.on('click', function(params) {
